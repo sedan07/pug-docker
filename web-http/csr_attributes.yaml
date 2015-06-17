@@ -1,0 +1,5 @@
+custom_attributes:
+  challengePassword: 'a_secret'
+extension_requests:
+  "1.3.6.1.4.1.34380.1.1.100": "corp-site"
+  "1.3.6.1.4.1.34380.1.1.101": "prod"
