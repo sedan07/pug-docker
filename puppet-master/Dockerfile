@@ -12,6 +12,8 @@ RUN chmod +x /usr/local/bin/launch.sh
 COPY puppet_autosign.rb /usr/local/bin/puppet_autosign.rb
 RUN chmod +x /usr/local/bin/puppet_autosign.rb
 
+RUN mkdir -p /etc/puppet/environments/production
+
 EXPOSE :8140
 
 VOLUME /etc/puppet/environments

@@ -10,6 +10,7 @@ class { 'apache':
 }
 class { 'puppet::master':
   trusted_node_data => true,
-  autosign => '/usr/local/bin/puppet_autosign.rb',
+  autosign          => '/usr/local/bin/puppet_autosign.rb',
+  environmentpath   => '/etc/puppet/environments'
 }
 
