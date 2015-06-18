@@ -5,6 +5,8 @@ RUN chmod +x /usr/local/bin/launch.sh
 
 COPY csr_attributes.yaml /etc/puppet/csr_attributes.yaml
 
+RUN mkdir /etc/facter/facts.d -p
+
 EXPOSE :443
 
 CMD ["/usr/local/bin/launch.sh"]
