@@ -14,6 +14,10 @@ RUN chmod +x /usr/local/bin/puppet_autosign.rb
 
 RUN mkdir -p /etc/puppet/environments/production
 
+# Adding this hack so we can have the Hiera data
+# and puppet manifests in one repo to keep things simple
+RUN sed -i 's/\/environments2/\/environments/' /etc/puppet/hiera.yaml
+
 EXPOSE :8140
 
 VOLUME /etc/puppet/environments
